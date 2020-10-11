@@ -1,0 +1,95 @@
+:root{
+   --success-color:#e74c3c;
+   --error-color:#2ecc71;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #f9fafb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  border-radius: 5px;
+  width: 400px;
+}
+
+.formClass {
+  padding: 30px 40px;
+
+}
+
+.formClass h2 {
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 5px;
+  color: #777777;
+}
+
+.form-control input {
+  display: block;
+  border: 2px solid #f0f0f0;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  width: 100%;
+}
+.form-control input:focus {
+  border-color: #777777;
+  outline: none;
+}
+/* 验证通过的样式 */
+.form-control.success input {
+  border-color: var(--success-color);
+
+}
+/* 验证不通过的样式 */
+.form-control.error input {
+  border-color: var(--error-color);
+}
+.form-control small {
+  color: var(--error-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+.form-control.success small {
+  border-color: var(--success-color);;
+}
+.form-control.error small {
+  border-color: var(--error-color);
+}
+
+.formClass button {
+  cursor: pointer;
+  background-color: #3498db;
+  border: 2px solid #3498db;
+  width: 100%;
+  color: #ffffff;
+  border-radius: 3px;
+  padding: 10px 0;
+  margin-top: 20px;
+  width: 100%;
+  font-size: 16px;
+}
